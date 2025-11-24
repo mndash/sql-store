@@ -1,0 +1,31 @@
+ --Minimum Sales Amount
+--This query finds the minimum sales amount from the list of values 
+--(100.50, 200.75, 150.00, 250.25, 175.80). The result will be 100.50.
+
+SELECT MIN(x) FROM (VALUES (100.50), (200.75), (150.00), (250.25), (175.80)) AS value(x);
+
+
+--Average Sales Amount
+--Explanation: This query calculates the average sales amount from the 
+--list of values (100.50, 200.75, 150.00, 250.25, 175.80). The result will --be the average of these values.
+SELECT AVG(x) FROM (VALUES (100.50), (200.75), (150.00), (250.25), (175.80)) AS value(x);
+
+Total Sales Amount
+--This query calculates the average sales amount from the list of values 
+--(100.50, 200.75, 150.00, 250.25, 175.80). The result will be the --average of these values.
+SELECT SUM(x) FROM (VALUES (100.50), (200.75), (150.00), (250.25), (175.80)) AS value(x);
+
+
+
+--Maximum Sales Amount
+--Explanation: This query finds the maximum sales amount from the list of 
+--values (100.50, 200.75, 150.00, 250.25, 175.80). The result will be 
+--250.25.
+SELECT MAX(x) FROM (VALUES (100.50), (200.75), (150.00), (250.25), (175.80)) AS value(x);
+
+
+
+--Sales Amounts Above a Threshold
+Explanation: This query selects sales amounts from the list of values that are above the threshold of 150.00. The result will be 200.75, 250.25, and 175.80.
+SELECT x FROM (VALUES (100.50), (200.75), (150.00), (250.25), (175.80)) AS value(x)
+WHERE x > 150.00;
